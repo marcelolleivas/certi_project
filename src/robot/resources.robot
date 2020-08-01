@@ -21,7 +21,7 @@ response should be a json
     Set Suite Variable         ${check_response}
 
 sending it as request in "${language}"
-    ${response}             Get Req     ${language}     ${value}
+    ${response}             Get Req     ${value}    ${language}
     Log                     ${response}
     Set Suite Variable                  ${response}
 

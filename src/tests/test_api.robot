@@ -1,6 +1,5 @@
 *** Settings ***
 Resource     ../robot/resources.robot
-#Library          ../base.py
 
 *** Test Cases ***
 Sending positive valid number and getting it in portuguese
