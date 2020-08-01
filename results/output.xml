@@ -1,0 +1,787 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.6.9 on linux)" generated="20200731 22:08:02.141" rpa="false">
+<suite id="s1" name="Tests" source="/home/marcelo-leivas/Desktop/certi_project/src/tests">
+<suite id="s1-s1" name="Test Link" source="/home/marcelo-leivas/Desktop/certi_project/src/tests/test_link.robot">
+<test id="s1-s1-t1" name="Sending positive valid number and getting it in portuguese">
+<kw name="Given I want the number &quot;10&quot; written in cursive" library="resources">
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${value}</arg>
+<arg>${value}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.225" level="INFO">${value} = 10</msg>
+<status status="PASS" starttime="20200731 22:08:02.224" endtime="20200731 22:08:02.225"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${value}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.225" level="INFO">10</msg>
+<status status="PASS" starttime="20200731 22:08:02.225" endtime="20200731 22:08:02.225"></status>
+</kw>
+<status status="PASS" starttime="20200731 22:08:02.224" endtime="20200731 22:08:02.225"></status>
+</kw>
+<kw name="When sending it as request in &quot;portuguese&quot;" library="resources">
+<kw name="Get Req" library="helper">
+<arguments>
+<arg>${language}</arg>
+<arg>${value}</arg>
+</arguments>
+<assign>
+<var>${response}</var>
+</assign>
+<msg timestamp="20200731 22:08:02.299" level="INFO">&lt;Response [200]&gt;</msg>
+<msg timestamp="20200731 22:08:02.299" level="INFO">${response} = dez</msg>
+<status status="PASS" starttime="20200731 22:08:02.226" endtime="20200731 22:08:02.299"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${response}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.300" level="INFO">dez</msg>
+<status status="PASS" starttime="20200731 22:08:02.300" endtime="20200731 22:08:02.301"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${response}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.302" level="INFO">${response} = dez</msg>
+<status status="PASS" starttime="20200731 22:08:02.301" endtime="20200731 22:08:02.302"></status>
+</kw>
+<status status="PASS" starttime="20200731 22:08:02.226" endtime="20200731 22:08:02.302"></status>
+</kw>
+<kw name="Then response should be &quot;dez&quot;" library="resources">
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${response}</arg>
+<arg>${written_number}</arg>
+</arguments>
+<status status="PASS" starttime="20200731 22:08:02.304" endtime="20200731 22:08:02.305"></status>
+</kw>
+<status status="PASS" starttime="20200731 22:08:02.303" endtime="20200731 22:08:02.305"></status>
+</kw>
+<status status="PASS" starttime="20200731 22:08:02.223" endtime="20200731 22:08:02.306" critical="yes"></status>
+</test>
+<test id="s1-s1-t2" name="Sending negative valid number and getting it in portuguese">
+<kw name="Given I want the number &quot;-10&quot; written in cursive" library="resources">
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${value}</arg>
+<arg>${value}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.309" level="INFO">${value} = -10</msg>
+<status status="PASS" starttime="20200731 22:08:02.309" endtime="20200731 22:08:02.309"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${value}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.310" level="INFO">-10</msg>
+<status status="PASS" starttime="20200731 22:08:02.310" endtime="20200731 22:08:02.310"></status>
+</kw>
+<status status="PASS" starttime="20200731 22:08:02.308" endtime="20200731 22:08:02.310"></status>
+</kw>
+<kw name="When sending it as request in &quot;portuguese&quot;" library="resources">
+<kw name="Get Req" library="helper">
+<arguments>
+<arg>${language}</arg>
+<arg>${value}</arg>
+</arguments>
+<assign>
+<var>${response}</var>
+</assign>
+<msg timestamp="20200731 22:08:02.340" level="INFO">&lt;Response [200]&gt;</msg>
+<msg timestamp="20200731 22:08:02.340" level="INFO">${response} = menos dez</msg>
+<status status="PASS" starttime="20200731 22:08:02.310" endtime="20200731 22:08:02.340"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${response}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.341" level="INFO">menos dez</msg>
+<status status="PASS" starttime="20200731 22:08:02.340" endtime="20200731 22:08:02.341"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${response}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.342" level="INFO">${response} = menos dez</msg>
+<status status="PASS" starttime="20200731 22:08:02.341" endtime="20200731 22:08:02.342"></status>
+</kw>
+<status status="PASS" starttime="20200731 22:08:02.310" endtime="20200731 22:08:02.342"></status>
+</kw>
+<kw name="Then response should be &quot;menos dez&quot;" library="resources">
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${response}</arg>
+<arg>${written_number}</arg>
+</arguments>
+<status status="PASS" starttime="20200731 22:08:02.343" endtime="20200731 22:08:02.343"></status>
+</kw>
+<status status="PASS" starttime="20200731 22:08:02.342" endtime="20200731 22:08:02.343"></status>
+</kw>
+<status status="PASS" starttime="20200731 22:08:02.307" endtime="20200731 22:08:02.344" critical="yes"></status>
+</test>
+<test id="s1-s1-t3" name="Sending last positive valid number and getting it in portuguese">
+<kw name="Given I want the number &quot;99999&quot; written in cursive" library="resources">
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${value}</arg>
+<arg>${value}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.346" level="INFO">${value} = 99999</msg>
+<status status="PASS" starttime="20200731 22:08:02.346" endtime="20200731 22:08:02.347"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${value}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.347" level="INFO">99999</msg>
+<status status="PASS" starttime="20200731 22:08:02.347" endtime="20200731 22:08:02.347"></status>
+</kw>
+<status status="PASS" starttime="20200731 22:08:02.345" endtime="20200731 22:08:02.347"></status>
+</kw>
+<kw name="When sending it as request in &quot;portuguese&quot;" library="resources">
+<kw name="Get Req" library="helper">
+<arguments>
+<arg>${language}</arg>
+<arg>${value}</arg>
+</arguments>
+<assign>
+<var>${response}</var>
+</assign>
+<msg timestamp="20200731 22:08:02.391" level="INFO">&lt;Response [200]&gt;</msg>
+<msg timestamp="20200731 22:08:02.391" level="INFO">${response} = noventa e nove mil e novecentos e noventa e nove</msg>
+<status status="PASS" starttime="20200731 22:08:02.348" endtime="20200731 22:08:02.391"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${response}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.392" level="INFO">noventa e nove mil e novecentos e noventa e nove</msg>
+<status status="PASS" starttime="20200731 22:08:02.391" endtime="20200731 22:08:02.392"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${response}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.393" level="INFO">${response} = noventa e nove mil e novecentos e noventa e nove</msg>
+<status status="PASS" starttime="20200731 22:08:02.392" endtime="20200731 22:08:02.393"></status>
+</kw>
+<status status="PASS" starttime="20200731 22:08:02.348" endtime="20200731 22:08:02.393"></status>
+</kw>
+<kw name="Then response should be &quot;noventa e nove mil e novecentos e noventa e nove&quot;" library="resources">
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${response}</arg>
+<arg>${written_number}</arg>
+</arguments>
+<status status="PASS" starttime="20200731 22:08:02.394" endtime="20200731 22:08:02.395"></status>
+</kw>
+<status status="PASS" starttime="20200731 22:08:02.394" endtime="20200731 22:08:02.395"></status>
+</kw>
+<status status="PASS" starttime="20200731 22:08:02.344" endtime="20200731 22:08:02.395" critical="yes"></status>
+</test>
+<test id="s1-s1-t4" name="Sending first negative valid number and getting it in portuguese">
+<kw name="Given I want the number &quot;-99999&quot; written in cursive" library="resources">
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${value}</arg>
+<arg>${value}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.398" level="INFO">${value} = -99999</msg>
+<status status="PASS" starttime="20200731 22:08:02.397" endtime="20200731 22:08:02.398"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${value}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.398" level="INFO">-99999</msg>
+<status status="PASS" starttime="20200731 22:08:02.398" endtime="20200731 22:08:02.398"></status>
+</kw>
+<status status="PASS" starttime="20200731 22:08:02.397" endtime="20200731 22:08:02.399"></status>
+</kw>
+<kw name="When sending it as request in &quot;portuguese&quot;" library="resources">
+<kw name="Get Req" library="helper">
+<arguments>
+<arg>${language}</arg>
+<arg>${value}</arg>
+</arguments>
+<assign>
+<var>${response}</var>
+</assign>
+<msg timestamp="20200731 22:08:02.434" level="INFO">&lt;Response [200]&gt;</msg>
+<msg timestamp="20200731 22:08:02.434" level="INFO">${response} = menos noventa e nove mil e novecentos e noventa e nove</msg>
+<status status="PASS" starttime="20200731 22:08:02.399" endtime="20200731 22:08:02.434"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${response}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.435" level="INFO">menos noventa e nove mil e novecentos e noventa e nove</msg>
+<status status="PASS" starttime="20200731 22:08:02.435" endtime="20200731 22:08:02.435"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${response}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.436" level="INFO">${response} = menos noventa e nove mil e novecentos e noventa e nove</msg>
+<status status="PASS" starttime="20200731 22:08:02.435" endtime="20200731 22:08:02.436"></status>
+</kw>
+<status status="PASS" starttime="20200731 22:08:02.399" endtime="20200731 22:08:02.436"></status>
+</kw>
+<kw name="Then response should be &quot;menos noventa e nove mil e novecentos e noventa e nove&quot;" library="resources">
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${response}</arg>
+<arg>${written_number}</arg>
+</arguments>
+<status status="PASS" starttime="20200731 22:08:02.438" endtime="20200731 22:08:02.438"></status>
+</kw>
+<status status="PASS" starttime="20200731 22:08:02.437" endtime="20200731 22:08:02.438"></status>
+</kw>
+<status status="PASS" starttime="20200731 22:08:02.396" endtime="20200731 22:08:02.439" critical="yes"></status>
+</test>
+<test id="s1-s1-t5" name="Sending invalid positive number and getting an error message on portuguese API">
+<kw name="Given I want the number &quot;100000&quot; written in cursive" library="resources">
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${value}</arg>
+<arg>${value}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.442" level="INFO">${value} = 100000</msg>
+<status status="PASS" starttime="20200731 22:08:02.441" endtime="20200731 22:08:02.442"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${value}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.443" level="INFO">100000</msg>
+<status status="PASS" starttime="20200731 22:08:02.443" endtime="20200731 22:08:02.443"></status>
+</kw>
+<status status="PASS" starttime="20200731 22:08:02.441" endtime="20200731 22:08:02.444"></status>
+</kw>
+<kw name="When sending it as request in &quot;portuguese&quot;" library="resources">
+<kw name="Get Req" library="helper">
+<arguments>
+<arg>${language}</arg>
+<arg>${value}</arg>
+</arguments>
+<assign>
+<var>${response}</var>
+</assign>
+<msg timestamp="20200731 22:08:02.476" level="INFO">&lt;Response [200]&gt;</msg>
+<msg timestamp="20200731 22:08:02.478" level="FAIL">JSONDecodeError: Expecting value: line 1 column 2 (char 1)</msg>
+<status status="FAIL" starttime="20200731 22:08:02.445" endtime="20200731 22:08:02.478"></status>
+</kw>
+<status status="FAIL" starttime="20200731 22:08:02.445" endtime="20200731 22:08:02.478"></status>
+</kw>
+<status status="FAIL" starttime="20200731 22:08:02.440" endtime="20200731 22:08:02.478" critical="yes">JSONDecodeError: Expecting value: line 1 column 2 (char 1)</status>
+</test>
+<test id="s1-s1-t6" name="Sending invalid negative number and getting an error message on portuguese API">
+<kw name="Given I want the number &quot;-100000&quot; written in cursive" library="resources">
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${value}</arg>
+<arg>${value}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.480" level="INFO">${value} = -100000</msg>
+<status status="PASS" starttime="20200731 22:08:02.480" endtime="20200731 22:08:02.481"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${value}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.481" level="INFO">-100000</msg>
+<status status="PASS" starttime="20200731 22:08:02.481" endtime="20200731 22:08:02.481"></status>
+</kw>
+<status status="PASS" starttime="20200731 22:08:02.480" endtime="20200731 22:08:02.481"></status>
+</kw>
+<kw name="When sending it as request in &quot;portuguese&quot;" library="resources">
+<kw name="Get Req" library="helper">
+<arguments>
+<arg>${language}</arg>
+<arg>${value}</arg>
+</arguments>
+<assign>
+<var>${response}</var>
+</assign>
+<msg timestamp="20200731 22:08:02.524" level="INFO">&lt;Response [200]&gt;</msg>
+<msg timestamp="20200731 22:08:02.524" level="FAIL">JSONDecodeError: Expecting value: line 1 column 2 (char 1)</msg>
+<status status="FAIL" starttime="20200731 22:08:02.482" endtime="20200731 22:08:02.525"></status>
+</kw>
+<status status="FAIL" starttime="20200731 22:08:02.482" endtime="20200731 22:08:02.525"></status>
+</kw>
+<status status="FAIL" starttime="20200731 22:08:02.479" endtime="20200731 22:08:02.526" critical="yes">JSONDecodeError: Expecting value: line 1 column 2 (char 1)</status>
+</test>
+<test id="s1-s1-t7" name="Sending invalid parameter and getting an error message on portuguese API">
+<kw name="Given I want to send invalid value &quot;abc&quot;" library="resources">
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${value}</arg>
+<arg>${value}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.530" level="INFO">${value} = abc</msg>
+<status status="PASS" starttime="20200731 22:08:02.529" endtime="20200731 22:08:02.530"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${value}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.531" level="INFO">abc</msg>
+<status status="PASS" starttime="20200731 22:08:02.530" endtime="20200731 22:08:02.531"></status>
+</kw>
+<status status="PASS" starttime="20200731 22:08:02.528" endtime="20200731 22:08:02.532"></status>
+</kw>
+<kw name="When sending it as request in &quot;portuguese&quot;" library="resources">
+<kw name="Get Req" library="helper">
+<arguments>
+<arg>${language}</arg>
+<arg>${value}</arg>
+</arguments>
+<assign>
+<var>${response}</var>
+</assign>
+<msg timestamp="20200731 22:08:02.575" level="INFO">&lt;Response [200]&gt;</msg>
+<msg timestamp="20200731 22:08:02.576" level="FAIL">JSONDecodeError: Expecting value: line 1 column 2 (char 1)</msg>
+<status status="FAIL" starttime="20200731 22:08:02.533" endtime="20200731 22:08:02.576"></status>
+</kw>
+<status status="FAIL" starttime="20200731 22:08:02.532" endtime="20200731 22:08:02.576"></status>
+</kw>
+<status status="FAIL" starttime="20200731 22:08:02.526" endtime="20200731 22:08:02.577" critical="yes">JSONDecodeError: Expecting value: line 1 column 2 (char 1)</status>
+</test>
+<test id="s1-s1-t8" name="Sending positive valid number and getting it in english">
+<kw name="Given I want the number &quot;10&quot; written in cursive" library="resources">
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${value}</arg>
+<arg>${value}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.580" level="INFO">${value} = 10</msg>
+<status status="PASS" starttime="20200731 22:08:02.580" endtime="20200731 22:08:02.580"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${value}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.581" level="INFO">10</msg>
+<status status="PASS" starttime="20200731 22:08:02.581" endtime="20200731 22:08:02.581"></status>
+</kw>
+<status status="PASS" starttime="20200731 22:08:02.579" endtime="20200731 22:08:02.582"></status>
+</kw>
+<kw name="When sending it as request in &quot;english&quot;" library="resources">
+<kw name="Get Req" library="helper">
+<arguments>
+<arg>${language}</arg>
+<arg>${value}</arg>
+</arguments>
+<assign>
+<var>${response}</var>
+</assign>
+<msg timestamp="20200731 22:08:02.626" level="INFO">&lt;Response [200]&gt;</msg>
+<msg timestamp="20200731 22:08:02.626" level="INFO">${response} = None</msg>
+<status status="PASS" starttime="20200731 22:08:02.583" endtime="20200731 22:08:02.627"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${response}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.627" level="INFO">None</msg>
+<status status="PASS" starttime="20200731 22:08:02.627" endtime="20200731 22:08:02.627"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${response}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.628" level="INFO">${response} = None</msg>
+<status status="PASS" starttime="20200731 22:08:02.628" endtime="20200731 22:08:02.628"></status>
+</kw>
+<status status="PASS" starttime="20200731 22:08:02.582" endtime="20200731 22:08:02.629"></status>
+</kw>
+<kw name="Then response should be &quot;ten&quot;" library="resources">
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${response}</arg>
+<arg>${written_number}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.630" level="INFO">Argument types are:
+&lt;class 'NoneType'&gt;
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20200731 22:08:02.631" level="FAIL">None != ten</msg>
+<status status="FAIL" starttime="20200731 22:08:02.630" endtime="20200731 22:08:02.631"></status>
+</kw>
+<status status="FAIL" starttime="20200731 22:08:02.629" endtime="20200731 22:08:02.631"></status>
+</kw>
+<status status="FAIL" starttime="20200731 22:08:02.577" endtime="20200731 22:08:02.632" critical="yes">None != ten</status>
+</test>
+<test id="s1-s1-t9" name="Sending negative valid number and getting it in english">
+<kw name="Given I want the number &quot;-10&quot; written in cursive" library="resources">
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${value}</arg>
+<arg>${value}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.635" level="INFO">${value} = -10</msg>
+<status status="PASS" starttime="20200731 22:08:02.635" endtime="20200731 22:08:02.636"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${value}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.636" level="INFO">-10</msg>
+<status status="PASS" starttime="20200731 22:08:02.636" endtime="20200731 22:08:02.636"></status>
+</kw>
+<status status="PASS" starttime="20200731 22:08:02.634" endtime="20200731 22:08:02.637"></status>
+</kw>
+<kw name="When sending it as request in &quot;english&quot;" library="resources">
+<kw name="Get Req" library="helper">
+<arguments>
+<arg>${language}</arg>
+<arg>${value}</arg>
+</arguments>
+<assign>
+<var>${response}</var>
+</assign>
+<msg timestamp="20200731 22:08:02.676" level="INFO">&lt;Response [200]&gt;</msg>
+<msg timestamp="20200731 22:08:02.676" level="INFO">${response} = None</msg>
+<status status="PASS" starttime="20200731 22:08:02.637" endtime="20200731 22:08:02.676"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${response}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.677" level="INFO">None</msg>
+<status status="PASS" starttime="20200731 22:08:02.676" endtime="20200731 22:08:02.677"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${response}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.678" level="INFO">${response} = None</msg>
+<status status="PASS" starttime="20200731 22:08:02.677" endtime="20200731 22:08:02.678"></status>
+</kw>
+<status status="PASS" starttime="20200731 22:08:02.637" endtime="20200731 22:08:02.678"></status>
+</kw>
+<kw name="Then response should be &quot;minus ten&quot;" library="resources">
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${response}</arg>
+<arg>${written_number}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.680" level="INFO">Argument types are:
+&lt;class 'NoneType'&gt;
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20200731 22:08:02.680" level="FAIL">None != minus ten</msg>
+<status status="FAIL" starttime="20200731 22:08:02.679" endtime="20200731 22:08:02.680"></status>
+</kw>
+<status status="FAIL" starttime="20200731 22:08:02.679" endtime="20200731 22:08:02.681"></status>
+</kw>
+<status status="FAIL" starttime="20200731 22:08:02.633" endtime="20200731 22:08:02.681" critical="yes">None != minus ten</status>
+</test>
+<test id="s1-s1-t10" name="Sending last positive valid number and getting it in english">
+<kw name="Given I want the number &quot;99999&quot; written in cursive" library="resources">
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${value}</arg>
+<arg>${value}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.685" level="INFO">${value} = 99999</msg>
+<status status="PASS" starttime="20200731 22:08:02.684" endtime="20200731 22:08:02.685"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${value}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.686" level="INFO">99999</msg>
+<status status="PASS" starttime="20200731 22:08:02.685" endtime="20200731 22:08:02.686"></status>
+</kw>
+<status status="PASS" starttime="20200731 22:08:02.683" endtime="20200731 22:08:02.686"></status>
+</kw>
+<kw name="When sending it as request in &quot;english&quot;" library="resources">
+<kw name="Get Req" library="helper">
+<arguments>
+<arg>${language}</arg>
+<arg>${value}</arg>
+</arguments>
+<assign>
+<var>${response}</var>
+</assign>
+<msg timestamp="20200731 22:08:02.723" level="INFO">&lt;Response [200]&gt;</msg>
+<msg timestamp="20200731 22:08:02.723" level="INFO">${response} = None</msg>
+<status status="PASS" starttime="20200731 22:08:02.687" endtime="20200731 22:08:02.723"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${response}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.724" level="INFO">None</msg>
+<status status="PASS" starttime="20200731 22:08:02.724" endtime="20200731 22:08:02.724"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${response}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.725" level="INFO">${response} = None</msg>
+<status status="PASS" starttime="20200731 22:08:02.724" endtime="20200731 22:08:02.725"></status>
+</kw>
+<status status="PASS" starttime="20200731 22:08:02.686" endtime="20200731 22:08:02.725"></status>
+</kw>
+<kw name="Then response should be &quot;nine thousand nine hundred ninety-nine&quot;" library="resources">
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${response}</arg>
+<arg>${written_number}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.726" level="INFO">Argument types are:
+&lt;class 'NoneType'&gt;
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20200731 22:08:02.726" level="FAIL">None != nine thousand nine hundred ninety-nine</msg>
+<status status="FAIL" starttime="20200731 22:08:02.726" endtime="20200731 22:08:02.727"></status>
+</kw>
+<status status="FAIL" starttime="20200731 22:08:02.725" endtime="20200731 22:08:02.727"></status>
+</kw>
+<status status="FAIL" starttime="20200731 22:08:02.682" endtime="20200731 22:08:02.727" critical="yes">None != nine thousand nine hundred ninety-nine</status>
+</test>
+<test id="s1-s1-t11" name="Sending first negative valid number and getting it in english">
+<kw name="Given I want the number &quot;-99999&quot; written in cursive" library="resources">
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${value}</arg>
+<arg>${value}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.730" level="INFO">${value} = -99999</msg>
+<status status="PASS" starttime="20200731 22:08:02.729" endtime="20200731 22:08:02.730"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${value}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.730" level="INFO">-99999</msg>
+<status status="PASS" starttime="20200731 22:08:02.730" endtime="20200731 22:08:02.731"></status>
+</kw>
+<status status="PASS" starttime="20200731 22:08:02.729" endtime="20200731 22:08:02.731"></status>
+</kw>
+<kw name="When sending it as request in &quot;english&quot;" library="resources">
+<kw name="Get Req" library="helper">
+<arguments>
+<arg>${language}</arg>
+<arg>${value}</arg>
+</arguments>
+<assign>
+<var>${response}</var>
+</assign>
+<msg timestamp="20200731 22:08:02.771" level="INFO">&lt;Response [200]&gt;</msg>
+<msg timestamp="20200731 22:08:02.771" level="INFO">${response} = None</msg>
+<status status="PASS" starttime="20200731 22:08:02.732" endtime="20200731 22:08:02.771"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${response}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.772" level="INFO">None</msg>
+<status status="PASS" starttime="20200731 22:08:02.771" endtime="20200731 22:08:02.772"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${response}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.773" level="INFO">${response} = None</msg>
+<status status="PASS" starttime="20200731 22:08:02.772" endtime="20200731 22:08:02.773"></status>
+</kw>
+<status status="PASS" starttime="20200731 22:08:02.731" endtime="20200731 22:08:02.773"></status>
+</kw>
+<kw name="Then response should be &quot;minus nine thousand nine hundred ninety-nine&quot;" library="resources">
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${response}</arg>
+<arg>${written_number}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.775" level="INFO">Argument types are:
+&lt;class 'NoneType'&gt;
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20200731 22:08:02.775" level="FAIL">None != minus nine thousand nine hundred ninety-nine</msg>
+<status status="FAIL" starttime="20200731 22:08:02.774" endtime="20200731 22:08:02.775"></status>
+</kw>
+<status status="FAIL" starttime="20200731 22:08:02.774" endtime="20200731 22:08:02.776"></status>
+</kw>
+<status status="FAIL" starttime="20200731 22:08:02.728" endtime="20200731 22:08:02.776" critical="yes">None != minus nine thousand nine hundred ninety-nine</status>
+</test>
+<test id="s1-s1-t12" name="Sending invalid positive number and getting an error message on english API">
+<kw name="Given I want the number &quot;100000&quot; written in cursive" library="resources">
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${value}</arg>
+<arg>${value}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.779" level="INFO">${value} = 100000</msg>
+<status status="PASS" starttime="20200731 22:08:02.778" endtime="20200731 22:08:02.779"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${value}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.780" level="INFO">100000</msg>
+<status status="PASS" starttime="20200731 22:08:02.779" endtime="20200731 22:08:02.780"></status>
+</kw>
+<status status="PASS" starttime="20200731 22:08:02.778" endtime="20200731 22:08:02.780"></status>
+</kw>
+<kw name="When sending it as request in &quot;english&quot;" library="resources">
+<kw name="Get Req" library="helper">
+<arguments>
+<arg>${language}</arg>
+<arg>${value}</arg>
+</arguments>
+<assign>
+<var>${response}</var>
+</assign>
+<msg timestamp="20200731 22:08:02.823" level="INFO">&lt;Response [200]&gt;</msg>
+<msg timestamp="20200731 22:08:02.824" level="FAIL">JSONDecodeError: Expecting value: line 1 column 2 (char 1)</msg>
+<status status="FAIL" starttime="20200731 22:08:02.781" endtime="20200731 22:08:02.824"></status>
+</kw>
+<status status="FAIL" starttime="20200731 22:08:02.781" endtime="20200731 22:08:02.824"></status>
+</kw>
+<status status="FAIL" starttime="20200731 22:08:02.777" endtime="20200731 22:08:02.825" critical="yes">JSONDecodeError: Expecting value: line 1 column 2 (char 1)</status>
+</test>
+<test id="s1-s1-t13" name="Sending invalid negative number and getting an error message on english API">
+<kw name="Given I want the number &quot;-100000&quot; written in cursive" library="resources">
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${value}</arg>
+<arg>${value}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.829" level="INFO">${value} = -100000</msg>
+<status status="PASS" starttime="20200731 22:08:02.828" endtime="20200731 22:08:02.829"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${value}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.830" level="INFO">-100000</msg>
+<status status="PASS" starttime="20200731 22:08:02.829" endtime="20200731 22:08:02.830"></status>
+</kw>
+<status status="PASS" starttime="20200731 22:08:02.827" endtime="20200731 22:08:02.831"></status>
+</kw>
+<kw name="When sending it as request in &quot;english&quot;" library="resources">
+<kw name="Get Req" library="helper">
+<arguments>
+<arg>${language}</arg>
+<arg>${value}</arg>
+</arguments>
+<assign>
+<var>${response}</var>
+</assign>
+<msg timestamp="20200731 22:08:02.900" level="INFO">&lt;Response [200]&gt;</msg>
+<msg timestamp="20200731 22:08:02.900" level="FAIL">JSONDecodeError: Expecting value: line 1 column 2 (char 1)</msg>
+<status status="FAIL" starttime="20200731 22:08:02.832" endtime="20200731 22:08:02.901"></status>
+</kw>
+<status status="FAIL" starttime="20200731 22:08:02.831" endtime="20200731 22:08:02.901"></status>
+</kw>
+<status status="FAIL" starttime="20200731 22:08:02.825" endtime="20200731 22:08:02.902" critical="yes">JSONDecodeError: Expecting value: line 1 column 2 (char 1)</status>
+</test>
+<test id="s1-s1-t14" name="Sending invalid parameter and getting an error message on english API">
+<kw name="Given I want to send invalid value &quot;abc&quot;" library="resources">
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${value}</arg>
+<arg>${value}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.905" level="INFO">${value} = abc</msg>
+<status status="PASS" starttime="20200731 22:08:02.904" endtime="20200731 22:08:02.905"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${value}</arg>
+</arguments>
+<msg timestamp="20200731 22:08:02.906" level="INFO">abc</msg>
+<status status="PASS" starttime="20200731 22:08:02.905" endtime="20200731 22:08:02.906"></status>
+</kw>
+<status status="PASS" starttime="20200731 22:08:02.904" endtime="20200731 22:08:02.906"></status>
+</kw>
+<kw name="When sending it as request in &quot;english&quot;" library="resources">
+<kw name="Get Req" library="helper">
+<arguments>
+<arg>${language}</arg>
+<arg>${value}</arg>
+</arguments>
+<assign>
+<var>${response}</var>
+</assign>
+<msg timestamp="20200731 22:08:02.942" level="INFO">&lt;Response [200]&gt;</msg>
+<msg timestamp="20200731 22:08:02.942" level="FAIL">JSONDecodeError: Expecting value: line 1 column 2 (char 1)</msg>
+<status status="FAIL" starttime="20200731 22:08:02.908" endtime="20200731 22:08:02.942"></status>
+</kw>
+<status status="FAIL" starttime="20200731 22:08:02.907" endtime="20200731 22:08:02.943"></status>
+</kw>
+<status status="FAIL" starttime="20200731 22:08:02.902" endtime="20200731 22:08:02.943" critical="yes">JSONDecodeError: Expecting value: line 1 column 2 (char 1)</status>
+</test>
+<status status="FAIL" starttime="20200731 22:08:02.163" endtime="20200731 22:08:02.944"></status>
+</suite>
+<status status="FAIL" starttime="20200731 22:08:02.142" endtime="20200731 22:08:02.946"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="10">Critical Tests</stat>
+<stat pass="4" fail="10">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="10" id="s1" name="Tests">Tests</stat>
+<stat pass="4" fail="10" id="s1-s1" name="Test Link">Tests.Test Link</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
