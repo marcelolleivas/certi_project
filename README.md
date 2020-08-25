@@ -1,5 +1,5 @@
 ## Description
-This project is written with Python and RobotFramework. It's consisted by testing a API and verifying if it's working as some business rules described it needed to work. 
+This project is written with Python and RobotFramework. It's consisted by testing an API and verifying if it's working as some business rules described it needed to work. 
 By the tests created in this project, it's possible to recognize some errors: 
 1) When the user sends values greater or inferior than permitted, the system returns a string instead of a json;
 2) The same happens when the user sends invalid parameters, as letters, for example;
